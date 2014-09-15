@@ -1,0 +1,9 @@
+<script>
+$.ajax({
+  type: "PUT",
+  url: "http://localhost:3000/see/addOneEva",
+  data: { id: 1}
+}).done(function( msg ) {
+  alert( "Data Saved: " + msg );
+});
+</script>

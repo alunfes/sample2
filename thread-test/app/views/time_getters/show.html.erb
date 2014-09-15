@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Datetime:</strong>
+  <%= @time_getter.datetime %>
+</p>
+
+<p>
+  <strong>Html:</strong>
+  <%= @time_getter.html %>
+</p>
+
+<%= link_to 'Edit', edit_time_getter_path(@time_getter) %> |
+<%= link_to 'Back', time_getters_path %>

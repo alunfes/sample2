@@ -1,0 +1,25 @@
+<%= form_for(@time_getter) do |f| %>
+  <% if @time_getter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@time_getter.errors.count, "error") %> prohibited this time_getter from being saved:</h2>
+
+      <ul>
+      <% @time_getter.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :datetime %><br>
+    <%= f.datetime_select :datetime %>
+  </div>
+  <div class="field">
+    <%= f.label :html %><br>
+    <%= f.text_area :html %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

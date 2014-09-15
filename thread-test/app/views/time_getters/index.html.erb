@@ -1,0 +1,36 @@
+<h1>Listing time_getters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Datetime</th>
+      <th>Html</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @time_getters.each do |time_getter| %>
+      <tr>
+        <td><%= time_getter.datetime %></td>
+        <td><%= time_getter.html %></td>
+        <td><%= link_to 'Show', time_getter %></td>
+        <td><%= link_to 'Edit', edit_time_getter_path(time_getter) %></td>
+        <td><%= link_to 'Destroy', time_getter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+
+<% @array.each do |array| %>
+<%= array %> </br>
+<% end %>
+
+
+<%= link_to 'New Time getter', new_time_getter_path %>
